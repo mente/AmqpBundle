@@ -46,14 +46,15 @@ class ConsumerFactory extends AMQPFactory
             );
         }
 
-        if (!class_exists($exchangeClass) || !is_a($exchangeClass, "AMQPQueue", true)) {
+        if (!class_exists($exchangeClass) || !is_a($exchangeClass, "AMQPExchange", true)) {
             throw new \InvalidArgumentException(
-                sprintf("exchangeClass '%s' doesn't exist or not a AMQPQueue", $exchangeClass)
+                sprintf("exchangeClass '%s' doesn't exist or not a AMQPExchange", $exchangeClass)
             );
         }
 
         $this->channelClass  = $channelClass;
         $this->queueClass = $queueClass;
+        $this->exchangeClass = $exchangeClass;
     }
 
     /**
