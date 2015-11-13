@@ -136,7 +136,7 @@ class M6WebAmqpExtension extends Extension
                 $consumer['qos_options'],
             ];
 
-            if ($consumer['callback']) {
+            if (isset($consumer['callback'])) {
                 //just to validate that callback service exists
                 $container->findDefinition($consumer['callback']);
 

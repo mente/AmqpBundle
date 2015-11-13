@@ -31,6 +31,7 @@ class Consumer extends AbstractAmqp
     {
         $this->queue        = $queue;
         $this->queueOptions = $queueOptions;
+        $this->callback     = $callback;
     }
 
     /**
