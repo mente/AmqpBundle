@@ -153,9 +153,15 @@ class Configuration implements ConfigurationInterface
             ->end();
     }
 
+    /**
+     * Exchange options used both for consumer and producer
+     *
+     * @return NodeDefinition
+     */
     private function exchangeOptions()
     {
         $builder = new NodeBuilder();
+
         return $builder
             ->arrayNode('exchange_options')
                 ->children()

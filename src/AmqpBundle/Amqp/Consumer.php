@@ -52,8 +52,8 @@ class Consumer extends AbstractAmqp
     /**
      * Consume the message. Thread will be blocked until message is received
      *
-     * @param int          $flags       A bitmask of any of the flags: AMQP_AUTOACK.
-     * @param string| null $consumerTag A string describing this consumer. Used for canceling subscriptions with cancel().
+     * @param int    $flags       A bitmask of any of the flags: AMQP_AUTOACK.
+     * @param string $consumerTag A string describing this consumer. Used for canceling subscriptions with cancel().
      *
      * @throws \RuntimeException if callback is not defined in consumer
      */
